@@ -1,0 +1,12 @@
+obj = videoinput('winvideo', 1,'YUY2_640x480');
+set(obj,'ReturnedColorSpace','rgb');
+src_obj = getselectedsource(obj);
+get(src_obj);
+ vidRes = get(obj, 'VideoResolution');
+ nBands = get(obj, 'NumberOfBands');
+ hImage = image( zeros(vidRes(2), vidRes(1), nBands) );
+preview(obj, hImage);
+ pause(2);
+x=getsnapshot(obj);
+x=imresize(x,[480 640]);
+imwrite(x,'D:\NCKH\bailam\x.jpg','Quality', 100);
