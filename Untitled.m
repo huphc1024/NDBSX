@@ -1,4 +1,4 @@
-x = imread('img/xema1.jpg');
+x = imread('img/1.jpg');
 [bienso, biensomau] = laybiensohoanchinh(x);
 ho=figure('position',[200 150 500 400],'NumberTitle','off','Name','KET QUA CAT BIEN SO',...
     'MenuBar','None','color',[0.8 0.8 0.8 0.8]);

@@ -10,7 +10,7 @@ for i = 1:size(seg1, 1)
     rec = nhandangsonoron(netso, input);
     
     if i==3
-        rec = nhandangchunoron(net, input);
+        rec = nhandangkhoangcachchu(input);
     end
     if i==4
         rec = nhandangchusonoron(netchuso,input);
