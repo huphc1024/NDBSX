@@ -1,11 +1,10 @@
 function chu = nhandangchunoron(net,input )
-
+load mangtraingdx.mat;
 matranmau=[35 20];
 
 input = imresize(input, matranmau, 'nearest');
 input=bwareaopen(input,60);
 vec = double(im2col(input, size(input), 'distinct'));
-
 rslt = sim(net, vec);
 [Y,I] = max(rslt);
 switch I
@@ -13,22 +12,22 @@ switch I
     case 1
         chu='F';
    
-    case 2
+    case 7
         chu='H';
   
     case 3
         chu='K';
         
-    case 4
+    case 6
         chu='L';
         
     case 5
         chu='M';
         
-    case 6
+    case 4
         chu='N'; 
     
-    case 7
+    case 2
         chu='P';  
    
     case 8

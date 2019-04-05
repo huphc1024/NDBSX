@@ -1,7 +1,6 @@
-function number1 = nhandangsonoron1(hang1, seg1, netso);% , netchu)
-%load 'netchu.mat';%them vao
-load 'netso.mat';%them vao
-load netchuso.mat
+function number1 = nhandangsonoron1(hang1, seg1, netso)
+load netchuso.mat;
+load mangtraingdx.mat;
 number1 = [];
 
 for i = 1:size(seg1, 1)
@@ -11,10 +10,10 @@ for i = 1:size(seg1, 1)
     rec = nhandangsonoron(netso, input);
     
     if i==3
-        rec = nhandangchunoron(netso,input);
+        rec = nhandangchunoron(net, input);
     end
     if i==4
-        rec = nhandangsonoron(netso,input);
+        rec = nhandangchusonoron(netchuso,input);
     end
     number1 = strcat(number1, rec); %ghep tung hang trong number voi rec
 end   

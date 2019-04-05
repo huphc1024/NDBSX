@@ -47,7 +47,7 @@ switch I
         chu='E';  
         
     case 13
-        chu='D';  
+        chu='D';
         
        otherwise
         chu='';
